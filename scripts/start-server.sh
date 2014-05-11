@@ -13,7 +13,8 @@
 #
 #
 
-DAEMON_USER=skype
+DAEMON_USER=root
+
 XSERVERNUM=1
 
 export DISPLAY=:$XSERVERNUM
