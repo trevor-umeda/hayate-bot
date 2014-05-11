@@ -4,7 +4,7 @@
 # Script by mweber at http://www.qxs.ch/2011/01/07/skype-instant-messages-from-zabbix/
 ##
 
-DAEMON_USER=skype
+DAEMON_USER=root
 XSERVERNUM=1
 
 if [[ "$USER" != "$DAEMON_USER" ]]; then

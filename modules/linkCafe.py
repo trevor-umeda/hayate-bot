@@ -9,7 +9,7 @@ import urllib2
 from datetime import datetime, timedelta
 
 
-url = "http://localhost:8080/linkCafe/link/createLink"
+url = "http://linkcafe.herokuapp.com/link/createLink"
 
 def SearchAndPrint(link,name):
   data = {
@@ -22,6 +22,8 @@ def SearchAndPrint(link,name):
 index = len(sys.argv)
 name = ""
 
-SearchAndPrint(sys.argv[1],sys.argv[2])
+for x in range(2, index):
+    name += sys.argv[x] + " "
 
-heroku config:set JAVA_OPTS='-Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:newrelic/newrelic.jar' NEW_RELIC_APP_NAME="linkcafe"
+SearchAndPrint(sys.argv[1],name)
+
